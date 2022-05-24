@@ -1,0 +1,19 @@
+db.zipcodes.find({city:"ATLANTA",state:"GA"})
+db.zipcodes.aggregate([{$match:{$and:[{city:"ATLANTA"},{state:"GA"}]}}])
+
+db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$count:"pop"}])
+
+By state:
+db.zipcodes.aggregate([{$match:{state:"GA"}},{$count:"pop"}])
+db.zipcodes.find().sort({pop:-1})
+db.zipcodes.aggregate([{$group:{id:"$state"}},{$sort:{pop-1}},{$limit:3}}])
+
+By City:
+
+db.zipcodes.find().sort({pop:-1})
+db.zipcodes.aggregate([{$group:{_id:"$city"}},{$sort:{pop:-1}},{$limit:3}])
+texas not found
+
+Bonus
+db.zipcodes.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}},{$group:{_id:"$_id.state",avgcitypop:{$avg:"$pop"}}}])
+db.zipcodes.aggregate([{$group:{_id:"$state"}},{$sort:{pop:-1}},{$limit:3}])

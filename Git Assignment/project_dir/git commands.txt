@@ -1,0 +1,22 @@
+mkdir project_dir
+  322  cd project_dir
+  323  git init
+  324  touch index.html
+  325  git status
+  326  git stage index.html
+  327  git commit -m"added index,html file"
+  328  touch info.txt
+  329  git status
+  330  touch .gitignore
+  331  git status
+  332  git status
+  333  git stage index.html
+  334  git commit -m"commited index.html"
+  335  git log
+  336  git checkout index.html
+  337  git add index.html
+  338  git checkout index.html
+  339  git config --global alias.my-add add
+  340  git my-add index.html
+  341  git commit -m "modified index file for my add command"
+  342  git reset --soft Head~1

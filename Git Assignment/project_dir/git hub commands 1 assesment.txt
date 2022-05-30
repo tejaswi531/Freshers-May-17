@@ -1,0 +1,239 @@
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git stage index.html
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git commit index.html
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   New Text Document.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        github assesment 1.txt
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git add index.html
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git commit -m 'index file commited'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   New Text Document.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        github assesment 1.txt
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git add index.html
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git commit -m 'index file commited'
+[master a7f8710] index file commited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   New Text Document.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        github assesment 1.txt
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git add info.txt
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git commit -m 'info file commited'
+[master c0dd329] info file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 info.txt
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   New Text Document.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        github assesment 1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git log
+commit c0dd32912b8415ce28d8b1085444c9512d714b47 (HEAD -> master)
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 11:46:30 2021 +0530
+
+    info file commited
+
+commit a7f8710e1d89860a9c6ab954001555903b05dde3
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 11:44:03 2021 +0530
+
+    index file commited
+
+commit 35e3d4288bbd1670f058f61c327f7108b89459f3
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 10:06:38 2021 +0530
+
+    Revert "updated index.html with a new line"
+
+    This reverts commit ac8beefb928d9931b419b7fbd0355a589cb77928.
+
+commit ac8beefb928d9931b419b7fbd0355a589cb77928
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 09:42:32 2021 +0530
+
+    updated index.html with a new line
+
+commit 81867dca315f0bd861e97d5ce37d68253e7df35a
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 09:34:48 2021 +0530
+
+    updated index.html with a new line
+
+commit 31c9b184968bc5fcfdb81fb8d75642667ead0446
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 09:30:41 2021 +0530
+
+    First release of Hello World!
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git revert index.html
+fatal: bad revision 'index.html'
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ mkdir git_revert_test
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir (master)
+$ cd git_revert_test
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git init
+Initialized empty Git repository in C:/Users/TPOTNURU/Desktop/project_dir/git_revert_test/.git/
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git revert HEAD
+fatal: bad revision 'HEAD'
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ touch demo_file
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git add demo_file
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$  git commit -am 'initial commit'
+[master (root-commit) 5c2b5d7] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 demo_file
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git commit -am "prepend content to demo file"
+On branch master
+nothing to commit, working tree clean
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git log
+commit 5c2b5d7d9ea2096acdfda9441c7c003964580147 (HEAD -> master)
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 12:06:19 2021 +0530
+
+    initial commit
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git revert HEAD
+[master 3b6e464] Revert "initial commit"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 demo_file
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git log
+commit 3b6e4642130efb32e8aea618cb2a34ba3c361cdc (HEAD -> master)
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 12:08:17 2021 +0530
+
+    Revert "initial commit"
+
+    This reverts commit 5c2b5d7d9ea2096acdfda9441c7c003964580147.
+
+commit 5c2b5d7d9ea2096acdfda9441c7c003964580147
+Author: teju <tejaswi.potnuru531@gmail.com>
+Date:   Fri Dec 10 12:06:19 2021 +0530
+
+    initial commit
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git commit -m 'index file commited'
+On branch master
+nothing to commit, working tree clean
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git stage index.html
+fatal: pathspec 'index.html' did not match any files
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git add 'i would rename it to' git my-add
+fatal: pathspec 'i would rename it to' did not match any files
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git my-add index.html
+git: 'my-add' is not a git command. See 'git --help'.
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git config --global alias.co my-add
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$ git my-add *
+git: 'my-add' is not a git command. See 'git --help'.
+
+tpotnuru@LIN65005823 MINGW64 ~/desktop/project_dir/git_revert_test (master)
+$

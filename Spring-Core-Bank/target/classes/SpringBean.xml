@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+ <bean class="SpringCoreBank.BankAccount" id="bankAccount1">
+
+<constructor-arg value="1171" type="long"/>
+
+<constructor-arg value="neeraj"/>
+
+<constructor-arg value="Saving"/>
+
+<constructor-arg value="15000" type="double"/>
+
+</bean>
+
+
+<bean class="SpringCoreBank.BankAccount" id="bankAccount2">
+
+<constructor-arg value="1172" type="long"/>
+
+<constructor-arg value="Ramesh"/>
+
+<constructor-arg value="Current"/>
+
+<constructor-arg value="20000" type="double"/>
+
+</bean>
+
+<!-- without autowiring<bean id="BankRepo" class="com.capgemini.springAssignment.Q3.BankAccountepositoryImpl"><property name="bankAccount"><list><ref bean="BankAccount1"/><ref bean="BankAccount2"/></list></property></bean> -->
+
+
+<!-- autowiring by Name<bean id="BankRepo" class="com.capgemini.springAssignment.Q3.BankAccountepositoryImpl" autowire="byName"></bean> -->
+
+
+<!-- autowiring by type ( it will work if we have only one type )<bean id="BankRepo" class="com.capgemini.springAssignment.Q3.BankAccountepositoryImpl" autowire="byType"/> -->
+
+
+<!-- autowiring by constructor -->
+
+
+<bean class="SpringCoreBank.BankAccountepositoryImpl" id="BankRepo" autowire="constructor"> </bean>
+
+<bean class="SpringCoreBank.BankAccountController" id="controller"> </bean>
+
+</beans>
